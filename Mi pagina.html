@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnología y sus Avances</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-e3+o+qNfgQ6JY5r6y9xk8Y6JH5dM4r4RvdPn1iZ4ZV1rEoKq0G5gVrCm9t+8KfZl2a3yM/3wH0tYmZBB5k2jKg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Fondo general ligeramente gris para distinguir menú */
+    color: #121212;
+}
+
+/* CABECERA CON IMAGEN DE FONDO TECNOLÓGICA */
+header {
+    position: relative;
+    text-align: center;
+    padding: 80px 20px;
+    /* RUTA DE IMAGEN DEL ENCABEZADO */
+    background: url('photo-1518770660439-4636190af475.jpg') no-repeat center center;
+    background-size: cover;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 3em;
+    margin: 0;
+    padding: 20px;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+/* MENÚ OSCURO */
+nav {
+    background-color: #1e1e1e; /* oscuro como antes */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 5px 10px;
+}
+
+nav ul li button {
+    padding: 10px 20px;
+    color: #e0e0e0;
+    background-color: #333333;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.3s;
+}
+
+nav ul li button:hover {
+    background-color: #1976d2;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* SECCIÓN PRINCIPAL */
+#main-content {
+    padding: 30px 50px;
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: white; /* Fondo blanco solo para el contenido */
+    color: #121212; /* Texto oscuro */
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #1976d2;
+    margin-top: 0;
+}
+
+p {
+    text-align: justify;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* ESTILO PARA CENTRAR LA IMAGEN EN EL CONTENIDO PRINCIPAL */
+#main-content img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e1e1e; /* oscuro como antes */
+    color: #e0e0e0;
+}
+
+/* Contenedor general para contacto y redes */
+.contacto-info-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo para los elementos de contacto directo (Teléfono, Email, Dirección) */
+.contacto-directo a, .contacto-directo span {
+    display: block; /* Cada uno en su propia línea */
+    margin: 10px 0;
+    color: #121212;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.contacto-directo i {
+    margin-right: 8px;
+    color: #1976d2;
+}
+
+/* Estilo para los enlaces de redes sociales (juntos y con margen) */
+.contacto-redes a {
+    display: inline-block;
+    margin: 10px 15px;
+    color: #121212;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s, transform 0.3s;
+}
+.contacto-redes a:hover {
+    color: #0d47a1;
+    transform: scale(1.05);
+}
+
+
+/* ESTILOS DEL FORMULARIO */
+.form-container {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #1e1e1e;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-group button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.form-group button:hover {
+    background-color: #0d47a1;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Tecnología y sus Avances</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><button onclick="loadPage('inicio')">Inicio</button></li>
+        <li><button onclick="loadPage('acerca')">Acerca de Nosotros</button></li>
+        <li><button onclick="loadPage('contacto')">Contacto</button></li>
+        <li><button onclick="loadPage('tecnologia')">Tecnología</button></li>
+    </ul>
+</nav>
+
+<section id="main-content"></section>
+
+<footer>
+    <p>&copy; 2025 Tecnología y Avances. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+const pages = {
+inicio: `<h2>Bienvenido a la Tecnología</h2>
+<p>La tecnología ha sido un motor fundamental en la historia de la humanidad. Desde los primeros utensilios de piedra hasta los dispositivos inteligentes de hoy, los avances tecnológicos han permitido a la humanidad progresar, conectarse y transformar la sociedad. Actualmente, la tecnología está presente en todos los ámbitos de nuestra vida: comunicación, transporte, educación, salud y entretenimiento. Nos permite realizar tareas complejas con rapidez, facilita el acceso a la información y nos conecta con personas de todo el mundo de forma instantánea.</p>
+<p>El impacto de la tecnología también se refleja en la economía y el comercio. Plataformas digitales y sistemas de automatización han revolucionado la forma de producir, vender y consumir productos y servicios. La computación en la nube y las herramientas colaborativas han permitido que empresas y personas trabajen desde cualquier lugar, optimizando recursos y aumentando la eficiencia. La educación se ha beneficiado enormemente con la tecnología, ofreciendo cursos en línea, recursos interactivos y sistemas de aprendizaje adaptativo que se ajustan al ritmo de cada estudiante.</p>
+
+<img src="diseno-web-con-ia.jpg" alt="Diseño web asistido por Inteligencia Artificial">
+
+<p>En el ámbito de la salud, los avances tecnológicos han permitido el desarrollo de diagnósticos más precisos, tratamientos personalizados y la telemedicina. La inteligencia artificial y los algoritmos avanzados analizan grandes cantidades de datos médicos para mejorar la detección temprana de enfermedades y optimizar la atención médica. La biotecnología, la nanotecnología y los dispositivos portátiles han transformado la manera en que cuidamos nuestra salud y bienestar.</p>
+<p>La conectividad global también ha redefinido la interacción social y cultural. Internet, redes sociales y aplicaciones móviles han cambiado la forma de comunicarnos, compartir información y acceder al entretenimiento. Estas herramientas han fomentado la colaboración global, la difusión de conocimiento y el surgimiento de nuevas formas de expresión artística y cultural.</p>
+<p>La historia de la tecnología muestra que cada avance construye sobre los logros anteriores. Desde la invención de la rueda y la escritura hasta la computación y la inteligencia artificial, cada innovación ha permitido superar desafíos y abrir nuevas oportunidades. Estudiar la evolución tecnológica nos ayuda a entender cómo llegamos al presente y cómo podemos anticipar el futuro.</p>
+<p>El futuro de la tecnología promete desarrollos aún más sorprendentes. La computación cuántica revolucionará la capacidad de procesamiento de datos, la inteligencia artificial se integrará en múltiples aspectos de nuestra vida diaria, y la robótica avanzada transformará industrias enteras. La exploración espacial y la sostenibilidad energética también estarán guiadas por la innovación tecnológica, ofreciendo soluciones a problemas globales y mejorando la calidad de vida en todo el planeta.</p>`,
+acerca: `<h2>Acerca de Nosotros</h2>
+<p>Somos un equipo apasionado por la tecnología y la educación digital. Nuestro objetivo es brindar información clara, actualizada y útil sobre los avances tecnológicos que impactan nuestra vida diaria y el futuro de la humanidad. Nos enfocamos en explicar conceptos complejos de manera sencilla, ofreciendo contenido educativo para estudiantes, profesionales y entusiastas de la tecnología.</p><p>Creemos que el conocimiento debe ser accesible para todos, y trabajamos constantemente para proporcionar información precisa y relevante. Nuestro compromiso es fomentar la curiosidad, la innovación y el aprendizaje continuo, ayudando a las personas a comprender mejor cómo la tecnología transforma el mundo y cómo pueden aprovecharla de manera efectiva.</p><p>Nuestro equipo combina experiencia en desarrollo web, programación, inteligencia artificial y educación digital. Analizamos tendencias tecnológicas, investigamos nuevas herramientas y compartimos recursos educativos para que todos puedan aprender y crecer profesionalmente. La misión es ofrecer un portal confiable donde la tecnología se explique de forma clara y práctica.</p><p>Además, buscamos inspirar a nuevas generaciones de innovadores y desarrolladores, promoviendo la participación activa en proyectos tecnológicos y ofreciendo ejemplos prácticos de cómo la tecnología puede mejorar la vida de las personas y la sociedad en general.</p><p>Estamos comprometidos con la transparencia, la ética y la actualización constante de nuestro contenido, asegurando que la información que ofrecemos refleje las últimas tendencias y descubrimientos en el mundo de la tecnología y sus aplicaciones.</p>
+`,
+contacto: `<h2>Contacto</h2>
+<p>Si deseas ponerte en contacto con nosotros, puedes utilizar el formulario, o contactarnos directamente a través de los siguientes medios. Valoramos tu retroalimentación.</p>
+
+<div class="form-container">
+    <form action="mailto:jimmyrolainermatosortiz@gmail.com" method="post" enctype="text/plain">
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="Nombre" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="Email" required>
+        </div>
+        <div class="form-group">
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="Mensaje" required></textarea>
+        </div>
+        <div class="form-group">
+            <button type="submit">Enviar Mensaje</button>
+        </div>
+    </form>
+</div>
+
+<p>También puedes contactarnos por teléfono, correo o visitarnos en nuestra dirección.</p>
+
+<div class="contacto-info-container">
+    
+    <div class="contacto-directo">
+        <span><i class="fas fa-map-marker-alt"></i> Azua de Compostela, calle Héctor Viriato Noboa, República Dominicana</span>
+        <a href="tel:8296860479"><i class="fas fa-phone"></i> 829-686-0479</a>
+        <a href="mailto:jimmyrolainermatosortiz@gmail.com"><i class="fas fa-envelope"></i> jimmyrolainermatosortiz@gmail.com</a>
+    </div>
+    
+    <hr style="border: 0; border-top: 1px solid #ccc; margin: 20px auto; width: 50%;">
+    
+    <div class="contacto-redes">
+        <a href="https://www.facebook.com/JimmyMatosOrtiz" target="_blank"><i class="fab fa-facebook"></i> Facebook: "Jimmy Matos Ortiz"</a>
+        <a href="https://www.instagram.com/Jimmy_DEV" target="_blank"><i class="fab fa-instagram"></i> Instagram: "Jimmy_DEV"</a>
+        <a href="https://twitter.com/JimmyMOrtiz" target="_blank"><i class="fab fa-x-twitter"></i> X: "Jimmy M. Ortiz"</a>
+    </div>
+    
+</div>
+
+<p>Nos esforzamos por ofrecer respuestas rápidas y útiles a todas las consultas.</p>`,
+tecnologia: `<h2>Tecnología</h2>
+<img src="tendencias-futuro-tecnologia-2024.jpg" alt="Tecnología avanzada">
+<p>La tecnología es el conjunto de conocimientos, herramientas y métodos que permiten crear, mejorar y optimizar procesos en distintos ámbitos. Desde la computación y la inteligencia artificial hasta la robótica, la nanotecnología y las telecomunicaciones, la tecnología está presente en casi todos los aspectos de nuestra vida cotidiana.</p><p>En la computación, los avances en hardware y software han permitido desarrollar sistemas más potentes y eficientes, capaces de procesar grandes cantidades de información y ejecutar tareas complejas en segundos. La inteligencia artificial ha revolucionado áreas como la medicina, la educación, el transporte y la industria, ofreciendo soluciones innovadoras y automatizando procesos de manera inteligente.</p><p>La robótica avanzada permite la automatización de tareas físicas, mejorando la precisión y reduciendo riesgos en manufactura, logística y medicina. La nanotecnología y los materiales inteligentes abren nuevas posibilidades en desarrollo de dispositivos, medicamentos y soluciones sostenibles para la industria y el medio ambiente.</p><p>Las telecomunicaciones y la conectividad global han transformado la manera en que nos comunicamos, accedemos a información y trabajamos en entornos colaborativos. Internet, redes de alta velocidad y dispositivos móviles permiten la interacción instantánea con personas y sistemas de todo el mundo.</p><p>El estudio y aplicación de la tecnología no solo mejora la eficiencia y productividad, sino que también tiene un profundo impacto en la sociedad, la economía y la cultura. Comprender cómo funciona la tecnología y sus aplicaciones permite aprovechar al máximo sus beneficios y prepararse para los desafíos del futuro.</p>`
+};
+
+function loadPage(page) {
+    document.getElementById('main-content').innerHTML = pages[page];
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    loadPage('inicio'); // carga inicio por defecto
+});
+</script>
+
+</body>
+</html>
